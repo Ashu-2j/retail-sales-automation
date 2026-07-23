@@ -15,7 +15,7 @@ import seaborn as sns
 import schedule
 
 # Set the exact path to your dataset
-DATA_PATH = "/content/retail_sales_dataset.csv"
+DATA_PATH = "retail_sales_dataset.csv"
 
 def run_pipeline():
     print("🚀 Starting automated pipeline execution...")
@@ -36,7 +36,7 @@ def run_pipeline():
     )
 
     # 4. Save CSV Report
-    report_csv_path = "/content/sales_summary_report.csv"
+    report_csv_path = "sales_summary_report.csv"
     category_summary.to_csv(report_csv_path)
 
     # 5. Generate & Save Visualization
@@ -52,7 +52,7 @@ def run_pipeline():
     plt.ylabel("Total Revenue ($)")
     plt.tight_layout()
 
-    chart_path = "/content/category_revenue_chart.png"
+    chart_path = "category_revenue_chart.png"
     plt.savefig(chart_path)
     plt.close()
 
